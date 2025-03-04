@@ -17,15 +17,19 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold; /* Сделает текст жирным */
+    font-size: 18px; /* Увеличит размер */
+    padding: 5px 10px;
+    border-radius: 5px; /* Скругление краев */
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    background-color: rgba(255, 255, 255, 0.2); /* Легкий фон */
 }
 
 section {
