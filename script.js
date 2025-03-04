@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Дата и время свадьбы (9 августа 2025 года в 15:00)
     const weddingTime = new Date(2025, 7, 9, 15, 0, 0).getTime();
+    const timerElement = document.getElementById("timer");
     
     function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = weddingTime - now;
-
-        const timerElement = document.getElementById("timer");
 
         if (now >= weddingTime + 24 * 60 * 60 * 1000) {
             timerElement.innerHTML = "Спасибо, что разделили с нами этот важный момент!";
