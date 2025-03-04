@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        timerElement.innerHTML = ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд;
+        timerElement.innerHTML = days + " дней, " + hours + " часов, " + minutes + " минут, " + seconds + " секунд";
     }
 
     if (timerElement) {
