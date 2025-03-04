@@ -26,11 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         timerElement.innerHTML = days + " дней, " + hours + " часов, " + minutes + " минут, " + seconds + " секунд";
     }
 
-        if (timerElement) {
         updateCountdown();
-        setInterval(updateCountdown, 1000);
-    } else {
-        console.error("Элемент с id='timer' не найден");
-    }
+    setInterval(updateCountdown, 1000);
 });
+
 
