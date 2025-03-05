@@ -60,6 +60,42 @@
         <p><a href="https://maps.google.com?q=Villa+Arcobaleno,Центральная+ул.,+21А,+Высоково" target="_blank">Открыть карту</a></p>
     </section>
 
+    <section id="survey">
+    <h2>Опрос для гостей</h2>
+    <form id="guestForm">
+        <label>Ваше ФИО:</label>
+        <input type="text" name="name" required>
+
+        <label>Сможете ли присутствовать?</label>
+        <input type="text" name="attendance" required>
+
+        <label>Предпочтения в алкоголе:</label>
+        <div>
+            <input type="checkbox" name="alcohol" value="Вино"> Вино
+            <input type="checkbox" name="alcohol" value="Шампанское"> Шампанское
+            <input type="checkbox" name="alcohol" value="Виски"> Виски
+            <input type="checkbox" name="alcohol" value="Водка"> Водка
+            <input type="checkbox" name="alcohol" value="Не пью алкоголь"> Не пью алкоголь
+        </div>
+
+        <label>Предпочтения в еде:</label>
+        <select name="food">
+            <option value="Мясо">Мясо</option>
+            <option value="Курица">Курица</option>
+            <option value="Рыба">Рыба</option>
+            <option value="Веган">Веган</option>
+        </select>
+
+        <label>Пищевая аллергия (если есть):</label>
+        <input type="text" name="allergy">
+
+        <label>Будете с детьми? Укажите количество и возраст:</label>
+        <input type="text" name="children">
+
+        <button type="submit">Отправить</button>
+    </form>
+</section>
+
     <footer>
         <p>До скорой встречи на свадьбе!</p>
     </footer>
