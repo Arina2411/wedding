@@ -62,38 +62,62 @@
 
     <section id="survey">
     <h2>Опрос для гостей</h2>
-    <form id="guestForm">
-        <label>Ваше ФИО:</label>
-        <input type="text" name="name" required>
+    <form id="rsvp-form">
+    <div class="form-group">
+        <label for="name">ФИО:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
 
-        <label>Сможете ли присутствовать?</label>
-        <input type="text" name="attendance" required>
+    <div class="form-group">
+        <label>Сможете ли вы присутствовать?</label>
+        <input type="radio" id="yes" name="attendance" value="Да">
+        <label for="yes">Да</label>
+        <input type="radio" id="no" name="attendance" value="Нет">
+        <label for="no">Нет</label>
+    </div>
 
-        <label>Предпочтения в алкоголе:</label>
-        <div>
-            <input type="checkbox" name="alcohol" value="Вино"> Вино
-            <input type="checkbox" name="alcohol" value="Шампанское"> Шампанское
-            <input type="checkbox" name="alcohol" value="Виски"> Виски
-            <input type="checkbox" name="alcohol" value="Водка"> Водка
-            <input type="checkbox" name="alcohol" value="Не пью алкоголь"> Не пью алкоголь
-        </div>
+    <div class="form-group">
+        <label>Какой алкоголь вы предпочитаете?</label>
+        <input type="checkbox" id="red_wine" name="alcohol" value="Красное вино">
+        <label for="red_wine">Красное вино</label>
 
+        <input type="checkbox" id="white_wine" name="alcohol" value="Белое вино">
+        <label for="white_wine">Белое вино</label>
+
+        <input type="checkbox" id="champagne" name="alcohol" value="Шампанское">
+        <label for="champagne">Шампанское</label>
+
+        <input type="checkbox" id="no_alcohol" name="alcohol" value="Не пью алкоголь">
+        <label for="no_alcohol">Не пью алкоголь</label>
+    </div>
+
+    <div class="form-group">
         <label>Предпочтения в еде:</label>
-        <select name="food">
-            <option value="Мясо">Мясо</option>
-            <option value="Курица">Курица</option>
-            <option value="Рыба">Рыба</option>
-            <option value="Веган">Веган</option>
-        </select>
+        <input type="radio" id="meat" name="food" value="Мясо">
+        <label for="meat">Мясо</label>
 
-        <label>Пищевая аллергия (если есть):</label>
-        <input type="text" name="allergy">
+        <input type="radio" id="chicken" name="food" value="Курица">
+        <label for="chicken">Курица</label>
 
-        <label>Будете с детьми? Укажите количество и возраст:</label>
-        <input type="text" name="children">
+        <input type="radio" id="fish" name="food" value="Рыба">
+        <label for="fish">Рыба</label>
 
-        <button type="submit">Отправить</button>
-    </form>
+        <input type="radio" id="vegan" name="food" value="Веган">
+        <label for="vegan">Веган</label>
+    </div>
+
+    <div class="form-group">
+        <label for="allergies">Есть ли у вас аллергии? (укажите, если есть)</label>
+        <input type="text" id="allergies" name="allergies">
+    </div>
+
+    <div class="form-group">
+        <label for="children">Будете ли вы с детьми?</label>
+        <input type="number" id="children" name="children" min="0" placeholder="Количество">
+    </div>
+
+    <button type="submit">Отправить</button>
+</form>
 </section>
 
     <footer>
