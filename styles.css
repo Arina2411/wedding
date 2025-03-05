@@ -25,8 +25,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold; /* Сделает текст жирным */
-    font-size: 18px; /* Увеличит размер */
-    text-transform: uppercase; /* Сделать заглавными */
+    font-size: 22px; /* Увеличит размер */
     padding: 5px 10px;
     border-radius: 5px; /* Скругление краев */
     transition: all 0.3s ease;
