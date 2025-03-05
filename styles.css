@@ -16,23 +16,41 @@ header {
     padding: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем кнопки */
+    gap: 10px; /* Отступы между кнопками */
+    padding: 10px;
 }
 
-nav ul li a {
+nav a {
+    flex: 1; /* Равномерное распределение */
+    max-width: 200px; /* Ограничение по ширине */
+    text-align: center;
+    padding: 10px 0;
+    background-color: #88a592; /* Цвет фона */
     color: white;
     text-decoration: none;
-    font-size: 22px; /* Увеличит размер */
-    padding: 5px 10px;
-    border-radius: 5px; /* Скругление краев */
-    transition: all 0.3s ease;
+    font-size: 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-    background-color: rgba(255, 255, 255, 0.2); /* Легкий фон */
+nav a:hover {
+    background-color: #6b8b7a; /* Цвет при наведении */
+}
+
+/* Для телефонов: 2 кнопки в ряд */
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    nav a {
+        max-width: calc(50% - 5px); /* 2 кнопки в ряд */
+    }
 }
 
 section {
