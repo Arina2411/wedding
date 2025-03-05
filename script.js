@@ -29,5 +29,38 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCountdown();
     setInterval(updateCountdown, 1000);
 });
+document.getElementById("guestForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Остановить стандартную отправку формы
 
+    let formData = new FormData(this);
+    let message = "Новая заявка на свадьбу!\n";
+
+    formData.forEach((value, key) => {
+        if (key === "alcohol") {
+            message += ${key}: ${Array.from(formData.getAll("alcohol")).join(", ")}\n;
+        } else {
+            message += ${key}: ${value}\n;
+        }
+    });
+
+    let telegramBotToken = "8140359529:AAGE4JmFQftP-exNBJ7vhwzOznHTUR0in0s";
+    let chatId = "939160971";
+    let telegramUrl = https://api.telegram.org/bot${telegramBotToken}/sendMessage;
+
+    fetch(telegramUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chatId, text: message }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.ok) {
+            alert("Ответ отправлен!");
+            document.getElementById("guestForm").reset();
+        } else {
+            alert("Ошибка отправки.");
+        }
+    })
+    .catch(error => alert("Ошибка: " + error));
+});
 
