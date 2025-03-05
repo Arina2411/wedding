@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            timerElement.innerHTML = ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд;
+            timerElement.innerHTML = days + " дней, " + hours + " часов, " + minutes + " минут, " + seconds + " секунд";
         }
 
         updateCountdown();
@@ -41,15 +41,15 @@ document.getElementById("guestForm").addEventListener("submit", function(event) 
 
     formData.forEach((value, key) => {
         if (key === "alcohol") {
-            message += ${key}: ${formData.getAll("alcohol").join(", ")}\n;
+            message += key + ": " + formData.getAll("alcohol").join(", ") + "\n";
         } else {
-            message += ${key}: ${value}\n;
+            message += key + ": " + value + "\n";
         }
     });
 
     let telegramBotToken = "8140359529:AAGE4JmFQftP-exNBJ7vhwzOznHTUR0in0s";
     let chatId = "939160971";
-    let telegramUrl = https://api.telegram.org/bot${telegramBotToken}/sendMessage;
+    let telegramUrl = "https://api.telegram.org/bot" + telegramBotToken + "/sendMessage";
 
     fetch(telegramUrl, {
         method: "POST",
