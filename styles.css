@@ -154,3 +154,17 @@ button {
 button:hover {
     background-color: #6f8a76;
 }
+
+form input[type="text"], 
+form input[type="number"], 
+form textarea, 
+form select {
+    width: 100%; /* Растягиваем на всю ширину блока */
+    max-width: 500px; /* Ограничиваем максимальную ширину */
+    display: block; /* Делаем элемент блочным, чтобы не было смещения */
+    margin: 0 auto; /* Центрируем */
+    padding: 10px; /* Добавляем отступы */
+    border: 1px solid #ccc; /* Делаем границу более аккуратной */
+    border-radius: 5px; /* Закругляем углы */
+    font-size: 16px; /* Увеличиваем шрифт для удобства */
+}
