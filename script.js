@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let message = "Новая заявка на свадьбу!\n";
 
         formData.forEach((value, key) => {
-            if (key === "alcohol") return; // Обработаем позже
-            message += ${key}: ${value}\n;
+           if (key === "alcohol") return; // Обработаем позже
+           message += key + ": " + value + "\n";
         });
 
         // Сбор выбранных вариантов алкоголя
