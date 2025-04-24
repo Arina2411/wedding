@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        timerElement.innerHTML = '${days}д ${hours}ч ${minutes}м ${seconds}с';
+        timerElement.innerHTML = days + "д " + hours + "ч " + minutes + "м " + seconds + "с";
     }
 
     updateTimer();
