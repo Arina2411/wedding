@@ -10,13 +10,13 @@ body {
 }
 
 header {
-    background-color: #88a592;
+   : #88a592;
     color: white;
     padding: 20px;
 }
 
 nav {
-    display: flex;
+ display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Центрируем кнопки */
     gap: 10px; /* Отступы между кнопками */
@@ -34,7 +34,7 @@ nav a {
     font-size: 23px;
     border-radius: 5px;
     transition: 0.3s;
-    border: 2px solid white; /* Цвет и толщина рамки */
+    border: 2px solid white; Цвет и толщинаки */
 }
 
 nav a:hover {
@@ -58,7 +58,7 @@ section {
 
 h2 {
     color: #2E4B40;
-    font-size: 25px;
+   25px;
 }
 
 .colors {
@@ -82,8 +82,8 @@ h2 {
 @media (min-width: 600px) {
     .colors {
         flex-wrap: nowrap;
-        max-width: none;
-    }
+        max-width:;
+ }
     .color {
         flex: none;
     }
@@ -95,22 +95,25 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+
 img {
     width: 50%;
-    max-width: 400px;
+    max-width:400px;
     border-radius: 10px;
     margin-top: 10px;
 }
+
 p {
     font-size: 22px;
 }
+
 form {
     max-width: 600px;
-    margin: 20px auto;
+   : 20px auto;
     padding: 20px;
-    background-color: rgb(154 189 167 / 63%); /* Светлый полупрозрачный фон */
+    background-color: rgba(154, 189, 167, 0.63); /* Светлый полупрозрачный фон */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0 0, 0.1);
 }
 
 label {
@@ -121,8 +124,7 @@ label {
 }
 
 input[type="text"],
-input[type="number"],
-textarea {
+input[type="textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -136,7 +138,7 @@ input[type="checkbox"] {
     margin-right: 10px;
 }
 
-.form-group {
+ {
     margin-bottom: 15px;
 }
 
@@ -152,11 +154,11 @@ button {
 }
 
 button:hover {
-    background-color: #6f8a76;
+    background-color #6f8;
 }
 
-form input[type="text"], 
-form input[type="number"], 
+form input="text"], 
+[type="number"], 
 form textarea, 
 form select {
     width: 100%; /* Растягиваем на всю ширину блока */
@@ -164,7 +166,24 @@ form select {
     display: block; /* Делаем элемент блочным, чтобы не было смещения */
     margin: 0 auto; /* Центрируем */
     padding: 10px; /* Добавляем отступы */
-    border: 1px solid #ccc; /* Делаем границу более аккуратной */
-    border-radius: 5px; /* Закругляем углы */
+    border: px solid #ccc; /* Делаем границу более ак    border-radius: 5px; /* Закругляем углы */
     font-size: 16px; /* Увеличиваем шрифт для удобства */
+}
+
+/* Добавленные стили для мобильной версии */
+@media screen and (max-width: 768px) {
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group textarea {
+        width: 100%;
+    }
 }
